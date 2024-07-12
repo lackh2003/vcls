@@ -10,9 +10,9 @@ date = 2024-03-07 22:10:30
 DOMAIN, testflight.apple.com, PROXY
 
 [Script]
-http-request ^https:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$ script-path=https://your_script_host_url/store_session_info.js, tag=Store Session Info
-http-request ^https:\/\/testflight\.apple\.com\/join\/.* script-path=https://your_script_host_url/add_testflight_id.js, tag=Add TestFlight ID
-cron "0 0 * * * *" script-path=https://your_script_host_url/auto_join_all_testflight.js, tag=Auto Join TestFlight
+http-request ^https:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$ script-path=https://raw.githubusercontent.com/lackh2003/vcls/main/tf1.js, tag=Store Session Info
+http-request ^https:\/\/testflight\.apple\.com\/join\/.* script-path=https://raw.githubusercontent.com/lackh2003/vcls/main/tf2.js, tag=Add TestFlight ID
+cron "0 0 * * * *" script-path=https://raw.githubusercontent.com/lackh2003/vcls/main/tf3.js, tag=Auto Join TestFlight
 
 [Mitm]
 hostname = testflight.apple.com
